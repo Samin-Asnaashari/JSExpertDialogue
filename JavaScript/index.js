@@ -26,7 +26,8 @@ const fizzBuzz = (start, end, a, b) => {
 function printPascalTriangle() {
   document.getElementById("pascal").innerHTML = "";
   var rows = document.getElementById("numRows").value;
-  var arr = generatePascal(+rows);
+  //   var arr = generatePascal(+rows);
+  var arr = createPascalTriangle(rows);
   for (var i = 0; i < arr.length; i++) {
     var div = document.createElement("div");
     div.className = "divblock";
@@ -56,4 +57,20 @@ function generatePascal(n) {
     }
   }
   return arr;
+}
+function createPascalTriangle(numRows) {
+  var pascalTriangle = [];
+  for (var i = 0; i < numRows; i++) {
+    pascalTriangle[i] = new Array(i + 1);
+
+    for (var j = 0; j < i + 1; j++) {
+      if (j === 0 || j === i) {
+        pascalTriangle[i][j] = 1;
+      } else {
+        pascalTriangle[i][j] =
+          pascalTriangle[i - 1][j - 1] + pascalTriangle[i - 1][j];
+      }
+    }
+  }
+  return pascalTriangle;
 }
