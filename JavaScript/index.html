@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JSExpertDialogue</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- <style ></style> -->
   </head>
   <body>
     <h1>Hello World From JSExpertDialogue:</h1>
@@ -26,7 +28,24 @@
       <h6 id="fizzBuzzResult">Result:</h6>
     </div>
     <hr />
-    <div></div>
+    <!--Pascal Triangle  -->
+    <div class="container">
+      <input
+        type="text"
+        placeholder="Enter number of rows for pascal Triangle"
+        style="width:80%"
+        id="numRows"
+      />
+      <input
+        type="button"
+        value="Go"
+        name="Go"
+        onClick="printPascalTriangle() "
+      />
+      <div id="pascal"></div>
+    </div>
+    <hr />
     <script src="index.js"></script>
+    <!-- <script></script> -->
   </body>
 </html>
