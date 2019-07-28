@@ -2,7 +2,7 @@
   margin: 0 auto;
 }
 
-.block {
+.pascalNumber {
   display: inline-block;
   position: relative;
   border: 1px solid grey;
@@ -14,15 +14,16 @@
 .divblock {
   text-align: center;
   vertical-align: middle;
+  background-color: cyan;
 }
   #pascal {
   margin: 0 auto;
   text-align: center;
 }
 
-.block:nth-child(odd) {
-  background: cyan;
+.pascalNumber:nth-child(odd) {
+  background: yellow;
 }
-.block:nth-child(even) {
-  background: grey;
+.pascalNumber:nth-child(even) {
+  background: red;
 }

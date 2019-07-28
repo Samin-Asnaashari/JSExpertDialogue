@@ -34,7 +34,7 @@ function printPascalTriangle() {
     for (var j = 0; j < arr[i].length; j++) {
       var span = document.createElement("span");
       span.innerHTML = arr[i][j];
-      span.className = "block";
+      span.className = "pascalNumber";
       div.appendChild(span);
     }
     document.getElementById("pascal").appendChild(div);
@@ -74,3 +74,11 @@ function createPascalTriangle(numRows) {
   }
   return pascalTriangle;
 }
+
+/**
+ * Algorithms:
+ */
+//  O(n) search. How to improve?
+//  The easiest solution is to sort the array and use binary search to find the value.
+//  Whenever you insert a value into the array, it should maintain order. Searching start by selecting a value from the middle of the array. Then compare the selected value with the search value. If the selected value is greater than search value, ignore the left side of the array and search the value on the right side and vice versa.
+//  O(log(n)).
